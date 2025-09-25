@@ -1,0 +1,232 @@
+/* General section styling with a futuristic gradient background */
+.nosotros {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #ffffff;
+  padding: 4rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* Container for content with max-width and centered layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section title with futuristic typography and animation */
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #00ddeb, #ff007a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Subtle animation for title */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section subtitle with clean and readable styling */
+.section-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  color: #d0d2d6;
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* Additional description text */
+.section-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #b0b3b8;
+  animation: fadeIn 1.4s ease-out;
+}
+
+/* Fade-in animation for text content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Founders grid with responsive layout */
+.fundadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Individual team member card with futuristic hover effect */
+.persona {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.persona:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 221, 235, 0.3);
+}
+
+/* Team member image with circular shape and neon border */
+.persona img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.persona:hover img {
+  border: 3px solid #00ddeb;
+}
+
+/* Team member name and role */
+.persona p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.persona .role {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #00ddeb;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* Bio text for team members */
+.persona .bio {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #b0b3b8;
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .persona {
+    padding: 1rem;
+  }
+
+  .persona img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-description {
+    font-size: 0.85rem;
+  }
+
+  .persona img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Theme Styles */
+html.light .nosotros {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e4f0e8 100%);
+  color: #0A2540;
+}
+
+html.light .section-title {
+  background: linear-gradient(45deg, #007bff, #ff007a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+html.light .section-subtitle {
+  color: #333;
+}
+
+html.light .section-description {
+  color: #555;
+}
+
+html.light .persona {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+html.light .persona:hover {
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+html.light .persona:hover img {
+  border: 3px solid #007bff;
+}
+
+html.light .persona p {
+  color: #0A2540;
+}
+
+html.light .persona .role {
+  color: #007bff;
+}
+
+html.light .persona .bio {
+  color: #555;
+}

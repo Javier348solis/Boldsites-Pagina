@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Containers/Home/index";
 import Contacto from "../Containers/Contacto/index";
 import Servicios from "../Containers/Servicios/index";
-import Nosotros from "../Containers/Nosotros/index"
+import Nosotros from "../../src/Containers/Nosotros/";
 // 
 
 export default function Rutas() {
