@@ -1,26 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PaginaPrincipal from "./pages/PaginaPrincipal";
-import ServicesPage from "./pages/ServicesPage";
-import Portafoliopage from "./pages/Portafoliopage";
-import Nosotros from "./components/Nosotros"
-import Paginacontact from "./pages/Paginacontact";
+import { Routes, Route } from "react-router-dom";
+import Home from "../Containers/Home/index";
+import Contacto from "../Containers/Contacto/index";
+import Servicios from "../Containers/Servicios/index";
+// 
 
-
-function App() {
+export default function Rutas() {
   return (
-    <Router>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<PaginaPrincipal />} />
-          <Route path="/servicios" element={<ServicesPage />} />
-          <Route path="/portafolio" element={<Portafoliopage />} />
-        
-          <Route path="/contacto" element={<Paginacontact />} />
-           <Route path="/Nosotros" element={<Nosotros />} />
-        </Route>
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/contacto" element={<Contacto />} />
+       <Route path="/servicios" element={<Servicios />} />
+     
+      {/* <Route path="/portafolio" element={<Portafoliopage />} />
+      <Route path="/contacto" element={<Paginacontact />} />
+      <Route path="/nosotros" element={<Nosotros />} /> */}
+    </Routes>
   );
 }
-
-export default App;

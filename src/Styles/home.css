@@ -1,0 +1,345 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(135deg, #0A2540, #1A4030);
+  color: #E6F0FA;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+.pagina-principal {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor general para centrar contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0A2540, #1A4030);
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 209, 255, 0.1) 0%, transparent 70%);
+  animation: bgPulse 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes bgPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Header */
+.header {
+  background: rgba(10, 37, 64, 0.9);
+  padding: 4rem 1rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: 0 0 20px rgba(0, 209, 255, 0.2);
+}
+
+.neon-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #00D1FF, #00FFAA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px #00D1FF;
+  animation: neonPulse 2s infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% { text-shadow: 0 0 10px #00D1FF; }
+  100% { text-shadow: 0 0 20px #00FFAA; }
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #B0C4DE;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Servicios */
+.servicios {
+  background: rgba(26, 64, 48, 0.9);
+  padding: 4rem 1rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.2);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #E6F0FA;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #B0C4DE;
+  margin-bottom: 2rem;
+}
+
+.servicios ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.servicios li {
+  background: rgba(10, 37, 64, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 209, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicios li:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.3);
+}
+
+.servicios li::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 209, 255, 0.2) 0%, transparent 70%);
+  animation: radialGlow 4s infinite;
+  z-index: 0;
+}
+
+@keyframes radialGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.descripcion {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 209, 255, 0.8);
+  color: #E6F0FA;
+  padding: 1rem;
+  font-size: 0.9rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.servicios li:hover .descripcion {
+  transform: translateY(0);
+}
+
+/* Sobre nosotros */
+.nosotros {
+  background: rgba(10, 37, 64, 0.9);
+  padding: 4rem 1rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.2);
+}
+
+.fundadores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.persona {
+  max-width: 220px;
+  text-align: center;
+}
+
+.persona img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00FFAA;
+  transition: transform 0.3s ease;
+}
+
+.persona img:hover {
+  transform: scale(1.1);
+}
+
+.role {
+  color: #00D1FF;
+  font-size: 0.9rem;
+}
+
+/* Testimonios */
+.testimonios {
+  background: rgba(26, 64, 48, 0.9);
+  padding: 4rem 1rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: 0 0 20px rgba(0, 209, 255, 0.2);
+}
+
+.testimonio-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonio-card {
+  background: rgba(10, 37, 64, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 170, 0.3);
+}
+
+.testimonio-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00FFAA;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.testimonio-card:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.testimonio-card h3 {
+  font-size: 1.5rem;
+  color: #E6F0FA;
+  margin-bottom: 1rem;
+}
+
+.testimonio-text {
+  font-size: 1rem;
+  color: #B0C4DE;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem;
+    min-height: calc(100vh - 50px);
+  }
+
+  .neon-title {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .servicios ul {
+    grid-template-columns: 1fr;
+  }
+
+  .fundadores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonio-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Theme Styles */
+html.dark {
+  background: #0D1B2A;
+  color: #E6F0FA;
+}
+
+html.light {
+  background: #F0F8FF;
+  color: #0A2540;
+}
+
+html.dark .header,
+html.dark .servicios,
+html.dark .nosotros,
+html.dark .testimonios {
+  background: rgba(13, 27, 42, 0.9);
+}
+
+html.light .header {
+  background: rgba(240, 248, 255, 0.9);
+}
+
+html.light .servicios {
+  background: rgba(173, 216, 230, 0.9);
+}
+
+html.light .nosotros {
+  background: rgba(224, 255, 255, 0.9);
+}
+
+html.light .testimonios {
+  background: rgba(176, 196, 222, 0.9);
+}

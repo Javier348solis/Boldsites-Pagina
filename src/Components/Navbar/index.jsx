@@ -1,7 +1,8 @@
+import React from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaMoon, FaSun } from "react-icons/fa";
-import "../styles/navbar.css";
-import logo from "../assets/Boldsites blue and black.png";
+import "../../Styles/navbar.css";
+import logo from "../../assets/Boldsites blue and black.png";
 
 export default function Navbar() {
   const location = useLocation();

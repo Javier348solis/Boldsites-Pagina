@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
