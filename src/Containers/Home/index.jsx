@@ -3,8 +3,7 @@ import '../../Styles/home.css';
 import Hero from "../../Components/Hero/index";
 import Footer from "../../Components/Footer/index";
 import Navbar from "../../Components/Navbar/index";
-import Foto1 from "../../assets/photo_naomy.jpg";
-import foto2 from "../../assets/photo_Javier_white.jpg"
+
 
 function PaginaPrincipal() {
   return (
@@ -53,24 +52,7 @@ function PaginaPrincipal() {
       </section>
 
       {/* Sobre nosotros */}
-      <section className="nosotros">
-        <div className="container">
-          <h2 className="section-title">Sobre Nosotros</h2>
-          <p className="section-subtitle">
-            Somos un equipo apasionado por la tecnología y el diseño con +1 año de experiencia, comprometido con ofrecer soluciones de calidad.
-          </p>
-          <div className="fundadores">
-            <div className="persona">
-              <img src={foto2} alt="Javier" />
-              <p>Javier Solís<br /><span className="role">Desarrollador Full-Stack</span></p>
-            </div>
-            <div className="persona">
-              <img src={Foto1} alt="Naomy" />
-              <p>Naomy Sandi<br /><span className="role">Desarrollador Full-Stack</span></p>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* Testimonios */}
       <section className="testimonios">

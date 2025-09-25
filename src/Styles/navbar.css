@@ -87,3 +87,32 @@
   color: #00FFAA;
   transform: scale(1.1);
 }
+
+html.light .navbar {
+  color: #0A2540;
+}
+
+html.light .navbar-logo {
+  color: #0A2540;
+}
+
+html.light .navbar-links a {
+  color: #0A2540;
+}
+
+html.light .navbar-links a:hover {
+  color: #007BFF;
+  text-shadow: 0 0 10px #007BFF;
+}
+
+html.light .menu-icon {
+  color: #0A2540;
+}
+
+html.light .theme-toggle {
+  color: #0A2540;
+}
+
+html.light .theme-toggle:hover {
+  color: #00D1FF;
+}

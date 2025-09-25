@@ -1,4 +1,4 @@
-.services-section {
+services-section {
   background: linear-gradient(135deg, #0A2540, #1A4030);
   padding: 4rem 1rem;
   position: relative;
@@ -146,4 +146,29 @@ html.dark .services-section {
 
 html.light .services-section {
   background: linear-gradient(135deg, #2A6F9F, #347B68);
+}
+
+html.light .services-title {
+  color: #0A2540;
+  background: linear-gradient(90deg, #007BFF, #00D1FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px #007BFF;
+}
+
+html.light .service-card {
+  background: rgba(240, 248, 255, 0.9);
+  border: 1px solid rgba(0, 123, 255, 0.2);
+}
+
+html.light .service-card:hover {
+  box-shadow: 0 0 20px rgba(0, 209, 255, 0.3);
+}
+
+html.light .service-card__title {
+  color: #0A2540;
+}
+
+html.light .service-card__description {
+  color: #333;
 }
