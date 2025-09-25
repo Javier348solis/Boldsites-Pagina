@@ -316,7 +316,7 @@ html.dark {
 
 html.light {
   background: #F0F8FF;
-  color: #0A2540;
+  /* Quitado: color: #0A2540; (conflicto con herencia de color en light mode, App.css lo maneja en body.light) */
 }
 
 html.dark .header,

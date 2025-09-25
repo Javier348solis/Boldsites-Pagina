@@ -247,8 +247,10 @@ html.light .hero-content:hover {
 html.light .hero-content h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   margin-bottom: 1.5rem;
+  background: none; /* Remueve el gradiente completamente */
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
   color: #000; /* Negro fijo */
-  -webkit-background-clip: unset;
   -webkit-text-fill-color: #000;
   text-shadow: none;
   font-weight: 900;

@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+/* --------------------------- */
+/* Global Styles (App.css)     */
+/* --------------------------- */
+:root {
+  --color-bg-dark: linear-gradient(135deg, #001f3f, #013220);
+  --color-bg-light: #f9f9f9;
+  --color-text-dark: #ffffff;
+  --color-text-light: #222222;
+  --color-accent: #00f0ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Fondo general con degradado */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg-dark);
+  color: var(--color-text-dark);
+  transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Modo claro */
+body.light {
+  background: var(--color-bg-light);
+  color: var(--color-text-light);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+body.light .navbar {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.navbar a {
+  color: inherit;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--color-accent);
+}
+
+/* Botón de toggle */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
 }

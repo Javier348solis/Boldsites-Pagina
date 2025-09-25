@@ -1,3 +1,4 @@
+/* Contacto.css */
 .contact-form {
   max-width: 600px;
   margin: 4rem auto;
@@ -69,6 +70,12 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   outline: none;
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: #B0C4DE;
+  opacity: 1;
 }
 
 .contact-form__input:focus,
@@ -154,7 +161,6 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .contact-form {
     margin: 2rem auto;
@@ -181,17 +187,24 @@
   }
 }
 
-/* Theme Styles */
 html.dark .contact-form {
   background: linear-gradient(135deg, #0A1F30, #153F2A);
 }
 
-html.light .contact-form {
-  background: linear-gradient(135deg, #2A6F9F, #347B68);
-}
-
 html.dark .contact-form__container {
   background: rgba(13, 27, 42, 0.9);
+}
+
+/* Asegurar que los placeholders sean visibles en oscuro */
+html.dark .contact-form__input::placeholder,
+html.dark .contact-form__textarea::placeholder {
+  color: #B0C4DE; /* gris claro */
+  opacity: 0.8;
+}
+
+
+html.light .contact-form {
+  background: linear-gradient(135deg, #2A6F9F, #347B68);
 }
 
 html.light .contact-form__container {
@@ -202,13 +215,20 @@ html.light .contact-form__label {
   color: #333;
 }
 
-html.light .contact-form__input, html.light .contact-form__textarea {
+html.light .contact-form__input,
+html.light .contact-form__textarea {
   color: #0A2540;
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 123, 255, 0.3);
 }
 
-html.light .contact-form__input:focus, html.light .contact-form__textarea:focus {
+html.light .contact-form__input::placeholder,
+html.light .contact-form__textarea::placeholder {
+  color: #333;
+}
+
+html.light .contact-form__input:focus,
+html.light .contact-form__textarea:focus {
   border-color: #00D1FF;
   box-shadow: 0 0 15px rgba(0, 209, 255, 0.5);
 }
