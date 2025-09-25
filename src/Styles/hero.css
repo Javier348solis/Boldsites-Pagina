@@ -1,12 +1,10 @@
-/* Existing Navbar and Footer Styles (from previous response) */
-
-/* Hero Styles */
+/* =======================
+   HERO BASE
+======================= */
 .hero {
   position: relative;
   width: 100%;
   min-height: calc(100vh - 60px);
-  background: linear-gradient(135deg, #0A2540, #1A4030);
-  color: #E6F0FA;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +14,8 @@
   box-sizing: border-box;
   overflow: hidden;
   animation: gradientShift 15s ease infinite;
+  background: linear-gradient(135deg, #0A2540, #1A4030); /* Default (dark base) */
+  color: #E6F0FA;
 }
 
 @keyframes gradientShift {
@@ -24,6 +24,9 @@
   100% { background-position: 0% 50%; }
 }
 
+/* =======================
+   GRID & PARTICLES
+======================= */
 .hero-grid {
   position: absolute;
   top: 0;
@@ -73,6 +76,9 @@
   100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
 }
 
+/* =======================
+   CONTENT
+======================= */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -122,15 +128,6 @@
   51%, 100% { opacity: 0; }
 }
 
-.pulse-text {
-  animation: textPulse 2s infinite alternate;
-}
-
-@keyframes textPulse {
-  0% { transform: scale(1); opacity: 0.9; }
-  100% { transform: scale(1.05); opacity: 1; }
-}
-
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -153,6 +150,9 @@
   100% { text-shadow: 0 0 15px #00FFAA, 0 0 30px #00D1FF; }
 }
 
+/* =======================
+   BUTTON
+======================= */
 .hero-button {
   display: inline-block;
   background: linear-gradient(135deg, #00D1FF, #00FFAA);
@@ -189,47 +189,91 @@
   box-shadow: 0 0 30px #00FFAA;
 }
 
-/* Responsive */
+/* =======================
+   RESPONSIVE
+======================= */
 @media (max-width: 768px) {
   .hero {
     padding: 1rem;
     min-height: calc(100vh - 50px);
   }
-
   .hero-content {
     padding: 2rem 1rem;
     border-radius: 15px;
   }
-
   .hero-content h1 {
     font-size: 2rem;
   }
-
   .hero-content p {
     font-size: 1rem;
   }
-
   .hero-button {
     padding: 1rem 2rem;
     font-size: 1rem;
   }
 }
 
-/* Theme Styles (from Navbar/Footer) */
+/* =======================
+   THEME VARIANTS
+======================= */
 html.dark {
   background: #0D1B2A;
   color: #E6F0FA;
 }
+html.dark .hero {
+  background: linear-gradient(135deg, #0A1F30, #153F2A);
+}
+html.dark .particle {
+  background: radial-gradient(circle, #00FFAA, #00D1FF);
+  box-shadow: 0 0 10px #00FFAA;
+}
 
+/* --- MODO CLARO CON TEXTO NEGRO --- */
 html.light {
   background: #F0F8FF;
   color: #0A2540;
 }
-
-html.dark .hero {
-  background: linear-gradient(135deg, #0A1F30, #153F2A);
-}
-
 html.light .hero {
   background: linear-gradient(135deg, #2A6F9F, #347B68);
+}
+html.light .hero-content {
+  background: rgba(240, 248, 255, 0.9);
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+}
+html.light .hero-content:hover {
+  box-shadow: 0 0 40px rgba(0, 123, 255, 0.6);
+}
+html.light .hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: 1.5rem;
+  color: #000; /* Negro fijo */
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #000;
+  text-shadow: none;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+html.light .cursor {
+  color: #000; /* Negro fijo */
+  text-shadow: none;
+}
+html.light .hero-content p {
+  color: #000; /* Negro fijo */
+}
+html.light .boldsites {
+  color: #000; /* Negro fijo */
+  text-shadow: none;
+}
+html.light .hero-button {
+  background: linear-gradient(135deg, #007BFF, #00D1FF);
+  color: #F0F8FF;
+  box-shadow: 0 0 15px #007BFF;
+}
+html.light .hero-button:hover {
+  box-shadow: 0 0 30px #00D1FF;
+}
+html.light .particle {
+  background: radial-gradient(circle, #00D1FF, #007BFF);
+  box-shadow: 0 0 10px #00D1FF;
 }

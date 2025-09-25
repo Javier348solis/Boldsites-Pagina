@@ -110,3 +110,19 @@ html.dark .footer {
 html.light .footer {
   background: linear-gradient(90deg, #347B68, #2A6F9F);
 }
+
+html.light .footer {
+  color: #0A2540;
+}
+
+html.light .footer p {
+  color: #333;
+}
+
+html.light .social-link {
+  color: #333;
+}
+
+html.light .social-link:hover {
+  color: #00D1FF;
+}
