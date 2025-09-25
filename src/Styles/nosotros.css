@@ -184,3 +184,49 @@
     height: 100px;
   }
 }
+
+/* Theme Styles */
+html.light .nosotros {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e4f0e8 100%);
+  color: #0A2540;
+}
+
+html.light .section-title {
+  background: linear-gradient(45deg, #007bff, #ff007a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+html.light .section-subtitle {
+  color: #333;
+}
+
+html.light .section-description {
+  color: #555;
+}
+
+html.light .persona {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+html.light .persona:hover {
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+html.light .persona:hover img {
+  border: 3px solid #007bff;
+}
+
+html.light .persona p {
+  color: #0A2540;
+}
+
+html.light .persona .role {
+  color: #007bff;
+}
+
+html.light .persona .bio {
+  color: #555;
+}

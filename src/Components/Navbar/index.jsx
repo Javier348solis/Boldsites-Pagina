@@ -15,6 +15,7 @@ export default function Navbar() {
   React.useEffect(() => {
     localStorage.setItem("darkMode", darkMode);
     document.documentElement.classList.toggle("dark", darkMode);
+    document.documentElement.classList.toggle("light", !darkMode);
   }, [darkMode]);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);

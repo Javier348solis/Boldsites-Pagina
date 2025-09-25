@@ -3,8 +3,7 @@ import '../../Styles/home.css';
 import Hero from "../../Components/Hero/index";
 import Footer from "../../Components/Footer/index";
 import Navbar from "../../Components/Navbar/index";
-import Foto1 from "../../assets/photo_naomy.jpg";
-import foto2 from "../../assets/photo_Javier_white.jpg"
+
 
 function PaginaPrincipal() {
   return (

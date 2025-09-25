@@ -197,3 +197,40 @@ html.dark .contact-form__container {
 html.light .contact-form__container {
   background: rgba(240, 248, 255, 0.1);
 }
+
+html.light .contact-form__label {
+  color: #333;
+}
+
+html.light .contact-form__input, html.light .contact-form__textarea {
+  color: #0A2540;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 123, 255, 0.3);
+}
+
+html.light .contact-form__input:focus, html.light .contact-form__textarea:focus {
+  border-color: #00D1FF;
+  box-shadow: 0 0 15px rgba(0, 209, 255, 0.5);
+}
+
+html.light .contact-form__button {
+  color: #0A2540;
+  background: linear-gradient(135deg, #007BFF, #00D1FF);
+  box-shadow: 0 0 10px #007BFF;
+}
+
+html.light .contact-form__button:hover {
+  box-shadow: 0 0 20px #00D1FF;
+}
+
+html.light .contact-form__success {
+  color: #00D1FF;
+}
+
+html.light .contact-form__title {
+  color: #0A2540;
+  background: linear-gradient(90deg, #007BFF, #00D1FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px #007BFF;
+}
