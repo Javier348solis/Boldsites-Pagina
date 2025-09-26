@@ -124,3 +124,49 @@ html.light .hero-button {
   background: radial-gradient(circle, #00D1FF, #007BFF) !important;
   box-shadow: 0 0 6px #00D1FF !important;
 }
+/* =======================
+   NEON BORDER ANIMATION
+======================= */
+.hero-content {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 22px;
+  background: rgba(0, 0, 0, 0.65); /* Fondo oscuro semi-transparente */
+  box-shadow: 0 0 25px rgba(0, 255, 170, 0.4);
+  border: 2px solid rgba(0, 255, 170, 0.6);
+  animation: neonPulse 4s ease-in-out infinite;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(90deg, #00D1FF, #00FFAA, #007BFF, #00FFAA, #00D1FF);
+  background-size: 300% 300%;
+  z-index: -1;
+  filter: blur(8px);
+  animation: neonBorder 6s linear infinite;
+}
+
+@keyframes neonBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =======================
+   PARAGRAPH ANIMATION
+======================= */
+.hero-content p {
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0% { opacity: 0.8; text-shadow: 0 0 5px rgba(0, 209, 255, 0.4); }
+  50% { opacity: 1; text-shadow: 0 0 15px rgba(0, 209, 255, 0.9); }
+  100% { opacity: 0.8; text-shadow: 0 0 5px rgba(0, 209, 255, 0.4); }
+}
