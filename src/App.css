@@ -22,9 +22,14 @@ body {
 }
 
 /* Modo claro */
-body.light {
+html.light {
   background: var(--color-bg-light);
   color: var(--color-text-light);
+}
+
+html.dark {
+  background: var(--color-bg-dark);
+  color: var(--color-text-dark);
 }
 
 /* Navbar */
