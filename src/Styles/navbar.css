@@ -1,4 +1,6 @@
-/* Navbar base */
+/* --------------------------- */
+/* Navbar base                 */
+/* --------------------------- */
 .navbar {
   background: linear-gradient(90deg, #0A2540, #1A4030);
   color: #E6F0FA;
@@ -18,9 +20,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Logo */
+/* --------------------------- */
+/* Logo                        */
+/* --------------------------- */
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -42,7 +47,9 @@
   transform: scale(1.1);
 }
 
-/* Links en desktop */
+/* --------------------------- */
+/* Links en desktop            */
+/* --------------------------- */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -64,7 +71,9 @@
   text-shadow: 0 0 10px #00D1FF;
 }
 
-/* Ícono menú hamburguesa */
+/* --------------------------- */
+/* Ícono menú hamburguesa      */
+/* --------------------------- */
 .menu-icon {
   display: none;
   font-size: 2rem;
@@ -76,7 +85,9 @@
   display: none;
 }
 
-/* Botón dark/light */
+/* --------------------------- */
+/* Botón dark/light            */
+/* --------------------------- */
 .theme-toggle {
   background: none;
   border: none;
@@ -91,7 +102,9 @@
   transform: scale(1.1);
 }
 
-/* 🌙☀️ Light Mode */
+/* --------------------------- */
+/* 🌞 Light Mode               */
+/* --------------------------- */
 html.light .navbar {
   color: #0A2540;
 }
@@ -121,12 +134,10 @@ html.light .theme-toggle:hover {
   color: #00D1FF;
 }
 
-/* 📱 Responsive */
+/* --------------------------- */
+/* 📱 Responsive               */
+/* --------------------------- */
 @media (max-width: 768px) {
-  .navbar-container {
-    flex-wrap: wrap;
-  }
-
   .menu-icon {
     display: block;
   }
@@ -135,11 +146,14 @@ html.light .theme-toggle:hover {
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    margin-top: 1rem;
-    padding: 1rem 0;
-    border-radius: 8px;
+    gap: 1rem;
+    width: 85%; /* ✅ más angosto */
+    margin: 1rem auto 0;
+    padding: 1.2rem;
+    border-radius: 12px;
+    background: rgba(10, 37, 64, 0.9); /* fondo semi-transparente */
+    box-shadow: 0 0 20px rgba(0, 209, 255, 0.6); /* efecto neón */
+    animation: slideDown 0.3s ease forwards;
   }
 
   /* cuando el toggle está marcado, se muestran los links */
@@ -148,6 +162,47 @@ html.light .theme-toggle:hover {
   }
 
   .navbar-links li {
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
+  }
+
+  .navbar-links a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    color: #E6F0FA; /* ✅ texto claro */
+    transition: color 0.3s, text-shadow 0.3s;
+  }
+
+  .navbar-links a:hover {
+    color: #00D1FF;
+    text-shadow: 0 0 8px #00D1FF;
+  }
+
+  /* 🌞 Light mode menú */
+  html.light .navbar-links {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+  }
+
+  html.light .navbar-links a {
+    color: #0A2540; /* ✅ texto oscuro en modo claro */
+  }
+
+  html.light .navbar-links a:hover {
+    color: #007BFF;
+    text-shadow: 0 0 8px #007BFF;
+  }
+
+  /* Animación de entrada */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 }
