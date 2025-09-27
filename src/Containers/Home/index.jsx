@@ -3,7 +3,9 @@ import '../../Styles/home.css';
 import Hero from "../../Components/Hero/index";
 import Footer from "../../Components/Footer/index";
 import Navbar from "../../Components/Navbar/index";
-
+import Foto1 from "../../assets/granja_cunicula.jpg";
+import Foto2 from "../../assets/Dirlux_imagen.webp";
+import Foto3 from "../../assets/Cartmania_cr.jpg";
 
 function PaginaPrincipal() {
   return (
@@ -63,24 +65,24 @@ function PaginaPrincipal() {
           </p>
           <div className="testimonio-cards">
             <div className="testimonio-card">
-              <img src="../src/assets/testimonio1.jpg" alt="Cliente 1" />
-              <h3>María López</h3>
+              <img src={Foto3} alt="Cliente 3" />
+              <h3>Cartmania</h3>
               <p className="testimonio-text">
-                "Boldsites transformó mi negocio con un sitio increíble. ¡El soporte fue excepcional!"
+                "Boldsites creó un e-commerce ágil y sin back-end, reduciendo significativamente costos y tiempos de desarrollo. Gracias a su optimización SEO de primer nivel, mi negocio ha experimentado un crecimiento exponencial. Estoy muy agradecido por su solución innovadora y efectiva"
               </p>
             </div>
             <div className="testimonio-card">
-              <img src="../src/assets/testimonio2.jpg" alt="Cliente 2" />
-              <h3>Juan Pérez</h3>
+              <img src={Foto2} alt="Cliente 2" />
+              <h3>Dirlux</h3>
               <p className="testimonio-text">
-                "Gracias a su SEO, mi tienda online duplicó sus ventas en meses. ¡Altamente recomendado!"
+              Boldsites revolucionó mi granja con una solución web que simplifica la gestión de animales y potencia la productividad. Su diseño innovador optimiza procesos y eleva resultados. ¡Un aliado clave para crecer!"   
               </p>
             </div>
             <div className="testimonio-card">
-              <img src="../src/assets/testimonio3.jpg" alt="Cliente 3" />
-              <h3>Ana Gómez</h3>
+               <img src={Foto1} alt="Cliente 1" />
+              <h3>Granja Cunicula</h3>
               <p className="testimonio-text">
-                "El diseño responsivo es perfecto. Mi sitio luce genial en todos los dispositivos."
+                "Boldsites revolucionó mi granja con una solución web que simplifica la gestión de animales y potencia nuestra productividad. ¡Un gran aliado!"
               </p>
               
             </div>
