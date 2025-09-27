@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../../Styles/hero.css";
 
+// Mueve phrases fuera del componente
+const phrases = ["Sitios web modernos", "Diseño responsivo", "SEO optimizado"];
+
 const Hero = () => {
   const [currentText, setCurrentText] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-
-  const phrases = ["Sitios web modernos", "Diseño responsivo", "SEO optimizado"];
 
   useEffect(() => {
     let phraseIndex = 0;
@@ -45,9 +46,9 @@ const Hero = () => {
     setTimeout(() => setIsVisible(true), 200);
 
     return () => clearInterval(cursorBlink);
-  }, []);
+  }, []); // Remueve phrases del array de dependencias, ya que ahora es estable
 
-  // 👇 Detecta si estamos en modo claro revisando <html class="light">
+  // Detecta si estamos en modo claro revisando <html class="light">
   const isLightMode = document.documentElement.classList.contains("light");
 
   return (
