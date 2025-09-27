@@ -75,7 +75,7 @@ function PaginaPrincipal() {
               <img src={Foto2} alt="Cliente 2" />
               <h3>Dirlux</h3>
               <p className="testimonio-text">
-              Boldsites revolucionó mi granja con una solución web que simplifica la gestión de animales y potencia la productividad. Su diseño innovador optimiza procesos y eleva resultados. ¡Un aliado clave para crecer!"   
+            "Boldsites mantiene nuestro sitio web con un enfoque impecable, optimizando la experiencia de usuario y asegurando un rendimiento fluido. Su dedicación al mantenimiento nos permite centrarnos en nuestro negocio mientras nuestro sitio brilla con un diseño moderno y funcional."   
               </p>
             </div>
             <div className="testimonio-card">
