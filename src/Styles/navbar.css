@@ -1,4 +1,4 @@
-/* Navbar.css */
+/* Navbar base */
 .navbar {
   background: linear-gradient(90deg, #0A2540, #1A4030);
   color: #E6F0FA;
@@ -20,6 +20,7 @@
   align-items: center;
 }
 
+/* Logo */
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -41,6 +42,7 @@
   transform: scale(1.1);
 }
 
+/* Links en desktop */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -62,7 +64,7 @@
   text-shadow: 0 0 10px #00D1FF;
 }
 
-/* Toggle móvil */
+/* Ícono menú hamburguesa */
 .menu-icon {
   display: none;
   font-size: 2rem;
@@ -74,6 +76,7 @@
   display: none;
 }
 
+/* Botón dark/light */
 .theme-toggle {
   background: none;
   border: none;
@@ -88,6 +91,7 @@
   transform: scale(1.1);
 }
 
+/* 🌙☀️ Light Mode */
 html.light .navbar {
   color: #0A2540;
 }
@@ -115,4 +119,35 @@ html.light .theme-toggle {
 
 html.light .theme-toggle:hover {
   color: #00D1FF;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-radius: 8px;
+  }
+
+  /* cuando el toggle está marcado, se muestran los links */
+  #menu-toggle:checked ~ .navbar-links {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.5rem 0;
+  }
 }
